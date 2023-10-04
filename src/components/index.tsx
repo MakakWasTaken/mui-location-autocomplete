@@ -1,11 +1,4 @@
-'use client'
-
-import React, {
-  useEffect,
-  useState,
-  FC,
-  useRef,
-} from 'react'
+import React, { useEffect, useState, FC, useRef } from 'react'
 import Box from '@mui/material/Box'
 import TextField, { TextFieldProps } from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
@@ -27,7 +20,7 @@ export interface LocationAutocompleteProps {
 }
 
 export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
-  defaultInputValue = '', 
+  defaultInputValue = '',
   value,
   onValueChange,
 

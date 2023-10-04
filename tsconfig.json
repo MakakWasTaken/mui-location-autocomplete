@@ -19,5 +19,5 @@
     "emitDeclarationOnly": true,
     "preserveSymlinks": true
   },
-  "exclude": ["example"]
+  "exclude": ["example", "dist"]
 }

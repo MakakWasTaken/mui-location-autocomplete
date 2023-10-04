@@ -1,5 +1,3 @@
-'use client'
-
 import { LocationAutocomplete, Location, GoogleMapsProvider } from 'mui-location-autocomplete'
 import { useState } from 'react'
 

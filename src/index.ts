@@ -12,5 +12,6 @@ export {
 }
 
 export type { Location } from './models/Location'
+export type { PlaceType, Options } from './providers'
 
 export default LocationAutocomplete

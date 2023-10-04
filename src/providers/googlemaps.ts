@@ -1,13 +1,21 @@
 import { DefaultProvider, Options } from '.'
-import {Location} from '../models/Location'
+import { Location } from '../models/Location'
 
-interface MatchedSubstring {length: number, offset: number}
+interface MatchedSubstring {
+  length: number
+  offset: number
+}
 
 interface GoogleMapsPrediction {
-  description: string,
+  description: string
   matched_substrings: MatchedSubstring[]
-  structured_formatting: {main_text: string, main_text_matched_substrings:MatchedSubstring[], secondary_text: string, secondary_text_matched_substrings: MatchedSubstring[]}
-  terms: {offset: number, value: string}[]
+  structured_formatting: {
+    main_text: string
+    main_text_matched_substrings: MatchedSubstring[]
+    secondary_text: string
+    secondary_text_matched_substrings: MatchedSubstring[]
+  }
+  terms: { offset: number; value: string }[]
 }
 
 interface GoogleMapsResponse {
@@ -36,15 +44,15 @@ export class GoogleMapsProvider extends DefaultProvider {
           return 'regions'
         case 'postcode':
           return 'postal_code'
-          case 'place':
-            return 'establishment'
-            case 'poi':
-              return 'point_of_interest'
+        case 'place':
+          return 'establishment'
+        case 'poi':
+          return 'point_of_interest'
         default:
           return type
       }
     })
-  } 
+  }
 
   /**
    * Get the locations from Google Maps API
@@ -70,8 +78,8 @@ export class GoogleMapsProvider extends DefaultProvider {
 
     const response = await fetch(url)
 
-    const data : GoogleMapsResponse = await response.json()
-    
+    const data: GoogleMapsResponse = await response.json()
+
     if (data.error_message) {
       console.error(data.error_message)
       return []
