@@ -36,6 +36,11 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
 
   const fetchCounter = useRef(0)
 
+  useEffect(() => {
+    // When default value is updated, update the input value.
+    setInputValue(defaultInputValue)
+  }, [defaultInputValue])
+
   const fetch = useDebouncedCallback(
     async (input: string, callback: (results: readonly Location[]) => void) => {
       if (!provider) {

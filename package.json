@@ -1,13 +1,11 @@
 {
   "name": "mui-location-autocomplete",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "source": "src/index.ts",
   "main": "dist/index.umd.js",
   "module": "dist/index.modern.module.js",
   "types": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "license": "MIT",
   "scripts": {
     "build": "microbundle --jsx React.createElement --tsconfig tsconfig.json --jsxFragment React.Fragment",
