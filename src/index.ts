@@ -1,17 +1,21 @@
+// Components
+import { LocationAutocomplete } from './components'
+
+// Classes
 import { DefaultProvider } from './providers'
 import { GoogleMapsProvider } from './providers/googlemaps'
 import { MapBoxProvider } from './providers/mapbox'
+
+// Types
 import { Location } from './models/Location'
-import { LocationAutocomplete } from './components'
+import { PlaceType, Options } from './providers'
 
 export {
   LocationAutocomplete,
   DefaultProvider,
-  MapBoxProvider,
   GoogleMapsProvider,
+  MapBoxProvider,
+  Location,
+  PlaceType,
+  Options,
 }
-
-export type { Location } from './models/Location'
-export type { PlaceType, Options } from './providers'
-
-export default LocationAutocomplete

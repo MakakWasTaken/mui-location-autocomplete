@@ -13,7 +13,7 @@
     "indentSize": 2
   },
   "linter": {
-    "ignore": ["coverage/**", "node_modules/**", "build/**"],
+    "ignore": ["coverage/**", "node_modules/**", "dist/**"],
     "enabled": true,
     "rules": {
       "recommended": true,

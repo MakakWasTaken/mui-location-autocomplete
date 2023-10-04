@@ -49,14 +49,14 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@MakakWasTaken'
+      # # Setup .npmrc file to publish to GitHub Packages
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 16
+      #     registry-url: 'https://npm.pkg.github.com'
+      #     scope: '@MakakWasTaken'
 
-      # Publish to GitHub Packages
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # # Publish to GitHub Packages
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

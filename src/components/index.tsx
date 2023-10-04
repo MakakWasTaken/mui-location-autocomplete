@@ -1,4 +1,4 @@
-import React, { useEffect, useState, FC, useRef } from 'react'
+import { useEffect, useState, FC, useRef } from 'react'
 import Box from '@mui/material/Box'
 import TextField, { TextFieldProps } from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import { Location } from '../models/Location'
 import { useDebouncedCallback } from 'use-debounce'
 import { DefaultProvider, Options } from '../providers'
+import React from 'react'
 
 export interface LocationAutocompleteProps {
   defaultInputValue?: string
