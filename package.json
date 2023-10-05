@@ -7,6 +7,20 @@
   "types": "dist/types/index.d.ts",
   "files": ["dist"],
   "license": "MIT",
+  "homepage": "https://github.com/MakakWasTaken/mui-location-autocomplete#readme",
+  "author": {
+    "name": "Markus Nyborg Moltke",
+    "email": "markus@unknown-studios.com",
+    "url": "https://unkown-studios.com"
+  },
+  "bugs": {
+    "url": "https://github.com/MakakWasTaken/mui-location-autocomplete/issues",
+    "email": "markus@unknown-studios.com"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/MakakWasTaken/mui-location-autocomplete.git"
+  },
   "scripts": {
     "build": "microbundle --jsx React.createElement --tsconfig tsconfig.json --jsxFragment React.Fragment",
     "lint": "biome format --write src && biome lint --apply src",
