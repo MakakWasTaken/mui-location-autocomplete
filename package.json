@@ -1,6 +1,6 @@
 {
   "name": "mui-location-autocomplete",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "source": "src/index.ts",
   "main": "dist/index.umd.js",
   "module": "dist/index.modern.module.js",
@@ -24,10 +24,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
     "use-debounce": "^9.0.4"
   },
   "peerDependencies": {
