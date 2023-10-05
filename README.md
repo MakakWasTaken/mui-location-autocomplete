@@ -1,7 +1,7 @@
 
 # mui-location-autocomplete
 
-A helper component
+A helper component for displaying a @mui/material Autocomplete component with search for maps.
 
 ## Dependencies
 
