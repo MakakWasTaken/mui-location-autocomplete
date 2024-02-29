@@ -1,17 +1,19 @@
-import { useEffect, useState, FC, useRef } from 'react'
+import Autocomplete from '@mui/material/Autocomplete'
 import Box from '@mui/material/Box'
 import TextField, { TextFieldProps } from '@mui/material/TextField'
-import Autocomplete from '@mui/material/Autocomplete'
 import Typography from '@mui/material/Typography'
-import { Location } from '../models/Location'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
+import { Location } from '../models/Location'
 import { DefaultProvider, Options } from '../providers'
-import React from 'react'
 
 export interface LocationAutocompleteProps {
   defaultInputValue?: string
   value: Location | null
   onValueChange: (location: Location | null) => void
+  disabled?: boolean
+  loadingText?: string
+
   provider: DefaultProvider
   debounceMs?: number
 
@@ -24,6 +26,8 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
   defaultInputValue = '',
   value,
   onValueChange,
+  disabled,
+  loadingText,
 
   provider,
   debounceMs = 200,
@@ -78,7 +82,7 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
     return () => {
       active = false
     }
-  }, [provider, inputValue])
+  }, [provider, inputValue, fetch, value])
 
   if (!provider) {
     return null
@@ -92,6 +96,8 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
       getOptionLabel={(option: any) =>
         typeof option === 'string' ? option : option.primaryText
       }
+      disabled={disabled}
+      loadingText={loadingText ?? 'Loading..'}
       options={options}
       autoComplete
       includeInputInList
