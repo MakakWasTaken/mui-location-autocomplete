@@ -18,6 +18,7 @@ export interface LocationAutocompleteProps {
   debounceMs?: number
 
   noOptionsText?: string
+  noOptionsValues?: Location[]
   textFieldProps?: TextFieldProps
   options?: Options
 }
@@ -33,6 +34,7 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
   debounceMs = 200,
 
   noOptionsText,
+  noOptionsValues,
   textFieldProps,
 }) => {
   const [inputValue, setInputValue] = useState(defaultInputValue)
@@ -98,7 +100,7 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
       }
       disabled={disabled}
       loadingText={loadingText ?? 'Loading..'}
-      options={options}
+      options={options.length === 0 ? noOptionsValues ?? options : options}
       autoComplete
       includeInputInList
       filterSelectedOptions
