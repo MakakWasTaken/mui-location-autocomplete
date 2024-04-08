@@ -10,19 +10,19 @@
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.4",
     "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.11",
-    "mui-location-autocomplete": "file:../",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
+    "mui-location-autocomplete": "file:..",
     "next": "13.5.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "eslint": "^8",
+    "@types/node": "^20.12.5",
+    "eslint": "^8.57.0",
     "eslint-config-next": "13.5.4",
-    "typescript": "^5"
+    "typescript": "^5.4.4"
   }
 }

@@ -108,7 +108,11 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
       loading={fetchCounter.current > 0}
       noOptionsText={noOptionsText ?? 'No locations'}
       onChange={(_: any, newValue: Location | null) => {
-        setOptions(newValue ? [newValue, ...options] : options)
+        setOptions(
+          newValue
+            ? [newValue, ...options, ...(noOptionsValues ?? [])]
+            : options,
+        )
         onValueChange(newValue)
       }}
       onInputChange={(_: any, newInputValue: string) => {

@@ -1,11 +1,12 @@
 import { Typography } from '@mui/material'
 import {
-  LocationAutocomplete,
-  Location,
   GoogleMapsProvider,
+  Location,
+  LocationAutocomplete,
 } from 'mui-location-autocomplete'
 import { useState } from 'react'
 
+// Using env variables to not include key in repository.
 const provider = new GoogleMapsProvider(process.env.NEXT_PUBLIC_KEY ?? '', {
   types: ['address'],
 })
@@ -16,11 +17,17 @@ const Home = () => {
   return (
     <>
       <Typography>Not component issue</Typography>
-      // Using env variables to not include key in repository.
       <LocationAutocomplete
         value={value}
         onValueChange={setValue}
         provider={provider}
+        noOptionsValues={[
+          {
+            fullText: 'Langelinie, 2100 København Ø',
+            primaryText: 'Langelinie',
+            secondaryText: '2100 København Ø',
+          },
+        ]}
       />
     </>
   )
