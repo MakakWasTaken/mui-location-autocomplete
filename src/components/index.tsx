@@ -1,4 +1,3 @@
-import Autocomplete from '@mui/material/Autocomplete'
 import Box from '@mui/material/Box'
 import TextField, { TextFieldProps } from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
@@ -6,6 +5,7 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import { Location } from '../models/Location'
 import { DefaultProvider, Options } from '../providers'
+import {Autocomplete, AutocompleteProps, SxProps, Theme} from '@mui/material'
 
 export interface LocationAutocompleteProps {
   defaultInputValue?: string
@@ -21,6 +21,8 @@ export interface LocationAutocompleteProps {
   noOptionsValues?: Location[]
   textFieldProps?: TextFieldProps
   options?: Options
+
+  sx?: SxProps<Theme>;
 }
 
 export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
@@ -36,6 +38,8 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
   noOptionsText,
   noOptionsValues,
   textFieldProps,
+
+  sx,
 }) => {
   const [inputValue, setInputValue] = useState(defaultInputValue)
   const [options, setOptions] = useState<readonly Location[]>([])
@@ -92,9 +96,8 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
 
   return (
     <Autocomplete
-      id="location-autocomplete"
       key="location-autocomplete"
-      sx={{ width: 300 }}
+      sx={sx ? sx: { width: 300, }}
       getOptionLabel={(option: any) =>
         typeof option === 'string' ? option : option.primaryText
       }

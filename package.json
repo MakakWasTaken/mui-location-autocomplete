@@ -1,6 +1,6 @@
 {
   "name": "mui-location-autocomplete",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "source": "src/index.ts",
   "main": "dist/index.umd.js",
   "module": "dist/index.modern.module.js",
@@ -13,7 +13,7 @@
   "author": {
     "name": "Markus Nyborg Moltke",
     "email": "markus@unknown-studios.com",
-    "url": "https://unkown-studios.com"
+    "url": "https://unknown-studios.com"
   },
   "bugs": {
     "url": "https://github.com/MakakWasTaken/mui-location-autocomplete/issues",
@@ -30,14 +30,14 @@
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.24.1",
-    "@biomejs/biome": "1.2.2",
-    "@types/node": "^20.12.5",
-    "@types/react": "^18.2.74",
+    "@babel/preset-typescript": "^7.24.7",
+    "@biomejs/biome": "1.8.3",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
     "microbundle": "^0.15.1",
-    "nodemon": "^3.1.0",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.4"
+    "nodemon": "^3.1.4",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "use-debounce": "^9.0.4"
