@@ -108,7 +108,7 @@ export const LocationAutocomplete: FC<LocationAutocompleteProps> = ({
       includeInputInList
       filterSelectedOptions
       value={value}
-      loading={fetchCounter.current > 0}
+      loading={options.length === 0 && fetchCounter.current > 0}
       noOptionsText={noOptionsText ?? 'No locations'}
       onChange={(_: any, newValue: Location | null) => {
         setOptions(
